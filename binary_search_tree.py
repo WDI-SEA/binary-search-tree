@@ -53,18 +53,19 @@ class BinaryTree:
 
     # Calculate the number of nodes in the tree, starting from the given node
     # If no node is provided, we can use the root as a sensible default
-    # def size(self, node=None):
-    #     if not node:
-    #         node = self.root
+    def size(self, node=None):
+        if not node:
+            node = self.root
 
-    #     count = 0
-    #     def recursive_size(node):
-    #         if node:
-    #             count += 1
-    #             recursive_size(node.left)
-    #             recursive_size(node.right)
-    #     recursive_size(node)
-    #     return count
+        count = 0
+        def recursive_size(node):
+            nonlocal count
+            if node:
+                count += 1
+                recursive_size(node.left)
+                recursive_size(node.right)
+        recursive_size(node)
+        return count
 
     # Return the maximum data value stored in the tree
     def getMax(self):
@@ -79,24 +80,22 @@ class BinaryTree:
 
     # Calculate the maximum amount of nodes in any one path from the given node
     # If not given a specific node, default to using the root node
-    # def height(self, node=None):
-    #     if not node:
-    #         node = self.root
+    def height(self, node=None):
+        if not node:
+            node = self.root
 
-    #     max_height = 0
-    #     def recursive_height(node, height=1):
-    #         global max_height
-    #         print(max_height)
-    #         if node:
-    #             if height > max_height:
-    #                 max_height = height
+        max_height = 0
+        def recursive_height(node, height=1):
+            nonlocal max_height
+            if node:
+                if height > max_height:
+                    max_height = height
 
-    #             recursive_height(node.left, height + 1)
-    #             recursive_height(node.right, height + 1)
+                recursive_height(node.left, height + 1)
+                recursive_height(node.right, height + 1)
 
-
-    #     recursive_height(node)
-    #     return max_height
+        recursive_height(node)
+        return max_height
 
 # Some Test Code
 my_bst = BinaryTree()
