@@ -21,7 +21,7 @@ class BinaryTree {
     const newNode = new BinaryNode(data);
     if (!this.root) {
         this.root = newNode;
-        return this;
+        return;
     }
 
     let walker = this.root;
@@ -29,7 +29,7 @@ class BinaryTree {
       if (data < walker.data) {
         if (!walker.left) {
           walker.left = newNode;
-          return this;
+          return;
         }
         else {
           walker = walker.left
@@ -38,7 +38,7 @@ class BinaryTree {
       else if (data > walker.data) {
         if (!walker.right) {
           walker.right = newNode;
-          return this;
+          return;
         }
         else {
           walker = walker.right;
