@@ -17,10 +17,10 @@ class BinaryTree:
         # if the node exists, return it
         # if the node doesn't exist, return false
     
-    size(self, node):
+    def size(self, node):
         # calculate the number of nodes in the tree, starting from the given node
     
-    getMax(self):
+    def getMax(self):
         # return the maximum value stored in the tree
     
     def height(self, node):
