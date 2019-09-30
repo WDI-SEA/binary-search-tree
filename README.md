@@ -10,4 +10,9 @@ The rule that a binary search tree follows in this case is:
 
 ## Directions
 
-Find the starter code in `binarySearchTree.js`. Implement all functions!
+Find the starter code in `binarySearchTree.js` or `binary_search_tree.py`. Pick the language of your choice. Implement all functions!
+
+## Bonuses
+
+* Implement this in the other language
+* Implement an in-order, post-order, or pre-order traversal
